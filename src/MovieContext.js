@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 
 export const MovieContext = createContext();
+console.log(MovieContext);
 
 export const MovieProvider = (props) => {
   console.log(props);
