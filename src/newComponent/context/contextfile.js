@@ -3,15 +3,12 @@ export const TextContext = createContext();
 export const colorchangerContext = createContext();
 
 export const ColorProvider = (props) => {
-  const [word, setword] = useState("green");
+  const [word, setword] = useState("hi everyone");
   const [color, setColor] = useState("green");
   const [bgcolor, setbgColor] = useState();
   const [changeGreeting, setChangeGreeting] = useState();
   return (
     <Fragment>
-      {/* <colorContext.Provider value={[word, setword]}>
-        {props.children}
-      </colorContext.Provider> */}
       <colorchangerContext.Provider
         value={[
           word,
@@ -26,9 +23,6 @@ export const ColorProvider = (props) => {
       >
         {props.children}
       </colorchangerContext.Provider>
-      {/* <colorContext.Provider value={[AppBgcolor, setAppBgColor]}>
-        {props.children}
-      </colorContext.Provider> */}
     </Fragment>
   );
 };
