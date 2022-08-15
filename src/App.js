@@ -22,17 +22,18 @@
 import ColorChanger from "./newComponent/ColorChanger";
 import { ColorProvider } from "./newComponent/context/contextfile";
 import Greeting from "./newComponent/Greeting";
-
+import { colorchangerContext } from "./newComponent/context/contextfile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faToggleOn, faToggleOff } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 
 function App() {
-  const [AppBgcolor, setAppBgColor] = useState(false);
+  //const [AppBgcolor, setAppBgColor] = useState(false);
   const [Box1, setBox1] = useState(false);
   const [Box2, setBox2] = useState(false);
   const [Box3, setBox3] = useState(false);
+  const [AppBgcolor, setAppBgColor] = useContext(colorchangerContext);
 
   // const colorHandler1 = () => {
   //   setBox1((prev) => !prev);

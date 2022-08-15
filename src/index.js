@@ -2,5 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { ColorProvider } from "./newComponent/context/contextfile";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <ColorProvider>
+    <App />
+  </ColorProvider>,
+  document.getElementById("root")
+);

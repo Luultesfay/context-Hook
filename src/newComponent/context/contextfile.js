@@ -7,6 +7,7 @@ export const ColorProvider = (props) => {
   const [color, setColor] = useState("green");
   const [bgcolor, setbgColor] = useState();
   const [changeGreeting, setChangeGreeting] = useState();
+  const [AppBgcolor, setAppBgColor] = useState(false);
   return (
     <Fragment>
       <colorchangerContext.Provider
@@ -19,6 +20,8 @@ export const ColorProvider = (props) => {
           setbgColor,
           changeGreeting,
           setChangeGreeting,
+          AppBgcolor,
+          setAppBgColor,
         ]}
       >
         {props.children}
